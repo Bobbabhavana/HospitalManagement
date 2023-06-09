@@ -1,10 +1,12 @@
 package dto;
 
 import java.sql.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 
 import lombok.Data;
@@ -26,6 +28,8 @@ public class Doctor {
 	private Date dob;
 	private int age;
 	private boolean status;
+	private boolean available;
 	
-
+	@OneToMany
+	List<Appointment> appointements;
 }

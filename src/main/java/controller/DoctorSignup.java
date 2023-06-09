@@ -18,6 +18,7 @@ import dto.Doctor;
 public class DoctorSignup extends HttpServlet
 {
 	 protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
+		 MyDao dao=new MyDao();
 		 String name=req.getParameter("name");
 		 Long mobile=Long.parseLong(req.getParameter("mobile"));
 		 String email=req.getParameter("email");
@@ -28,7 +29,7 @@ public class DoctorSignup extends HttpServlet
 		 Date dob=Date.valueOf(req.getParameter("dob"));
 		 
 		 int age=Period.between(dob.toLocalDate(), LocalDate.now()).getYears(); 
-		 
+		 if(dao.fetchStaff(mobile)==null && dao.fetchStaff(email)==null && dao.fetchDoctor(mobile)==null && dao.fetchDoctor(email)==null){
 		 Doctor doctor=new Doctor();
 		 doctor.setAge(age);
 		 doctor.setName(name);
@@ -40,12 +41,17 @@ public class DoctorSignup extends HttpServlet
 		 doctor.setGender(gender);
 		 doctor.setDob(dob);
 		 
-		 MyDao dao=new MyDao();
+		
 		  dao.saveDoctor(doctor);
 		  
-		  resp.getWriter().print("<h1>Doctor Account Created SuccessFully</h1>");
+		  resp.getWriter().print("<h1 style='color:green'>Doctor Account Created SuccessFully Wait for Admin Approval</h1>");
 		  resp.getWriter().print("<h1>Your Doctor id:"+doctor.getId()+"</h1>");
 		  req.getRequestDispatcher("Login.html").include(req,resp);
+		 }else{
+				resp.getWriter().print("<h1> Doctor Account already exists");
+				req.getRequestDispatcher("Doctor_signup.html").include(req, resp);
+		 
 		 
 	 }
+}
 }

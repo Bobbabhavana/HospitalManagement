@@ -18,7 +18,7 @@ import dto.Staff;
 public class StaffSignup extends HttpServlet
 {
    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
-	   
+	   MyDao dao=new MyDao();
 	 String name=req.getParameter("name");
 	 Long mobile=Long.parseLong(req.getParameter("mobile"));
 	 String email=req.getParameter("email");
@@ -27,8 +27,9 @@ public class StaffSignup extends HttpServlet
 	 Date dob=Date.valueOf(req.getParameter("dob"));
 	 
 //	 int age=LocalDate.now().getYear()-dob.toLocalDate().getYear();
-	   int age=Period.between(dob.toLocalDate(), LocalDate.now()).getYears(); 
-			   
+	   int age=Period.between(dob.toLocalDate(), LocalDate.now()).getYears();
+	   
+		if(dao.fetchStaff(mobile)==null && dao.fetchStaff(email)==null && dao.fetchDoctor(mobile)==null && dao.fetchDoctor(email)==null){  
 	  Staff staff=new Staff();
 	  staff.setName(name);
 	  staff.setMobile(mobile);
@@ -38,13 +39,17 @@ public class StaffSignup extends HttpServlet
 	  staff.setGender(gender);
 	  staff.setAge(age);
 	   
-	  MyDao dao=new MyDao();
+
 	  dao.saveStaff(staff);
 	  
-	  resp.getWriter().print("<h1>Staff Account Created SuccessFully</h1>");
+	  resp.getWriter().print("<h1 style='color:green'>Staff Account Created SuccessFully wait for Admin Approval</h1>");
 	  resp.getWriter().print("<h1>Your Staff id:"+staff.getId()+"</h1>");
 	  req.getRequestDispatcher("Login.html").include(req,resp);
+		}else{
+			resp.getWriter().print("<h1> Staff Account already exists");
+			req.getRequestDispatcher("Staff_signup.html").include(req, resp);
 	 
 	   
    }
+}
 }
