@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>FetchBY Id</title>
+<style>
+*{
+    margin:0;
+    padding: 0;
+   
+}
+body{
+    background-image:linear-gradient(rgba(240, 20, 178, 0.381),rgba(238, 10, 10, 0.584));
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-x: hidden;  
+}
+.canva{
+    width: 30%;
+    height:24px;
+    margin: 80px 0 0 360px;
+    font-size: larger;
+    font-weight: bolder;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: black;
+    border-radius: 20px;
+    font-size: 20px;
+   
+}
+.canva button{
+    position: relative;
+    left: 60%;
+    width: 25%;
+    height: 20px;
+    border-style: dashed;
+    font-weight: bold;
+}
+.canva1 button{
+    position: relative;
+    left: 46%;
+    top: -3px;
+    width: 7%;
+    height: 20px;
+    font-size: 15px;
+    border-style: double;
+    font-weight:bold;
+}
+.canva input{
+    border-style: double;
+    color: black; 
+    height: 20px;
+    top: 10%;
+}
+
+
+
+</style>
+</head>
+<body>
+    <div class="canva">
+        <form action="AppointmentForm.jsp">
+         Enter Id:<input type="text" name="id"><button>Book</button>
+        </form>
+    </div>
+<br><br>
+<div class="canva1">
+  <a href="BookAppointment.jsp"> <button>Back</button></a>
+</div>
+</body>
+</html>

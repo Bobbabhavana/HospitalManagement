@@ -2,40 +2,41 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Staff Signup</title>
+<link rel="stylesheet" href="Staff_signup.css">
 </head>
 <body>
-    <h1>Enter Staff Details</h1><br>
+    <h1 id="demo">Enter Staff Details</h1><br>
     <form action="staffsignup" method="post">
      <table>
-        <tr>
+        <tr id="item1">
             <th><label for="name">Name: </label></th>
             <th><input type="text" name="name" id="name"></th>
         </tr>
-        <tr>
+        <tr id="item2">
             <th><label for="mobile">Mobile: </label></th>
             <th><input type="tel" pattern="{0-9}[10]" name="mobile" id="mobile"></th>
         </tr> 
-        <tr>
+        <tr id="item3">
             <th><label for="email">Email: </label></th>
             <th><input type="email" name="email" id="email"></th>
         </tr> 
-        <tr>
+        <tr id="item4">
             <th><label for="password">Password: </label></th>
             <th><input type="password" name="password" id="password"></th>
         </tr> 
-        <tr>
+        <tr id="item5">
             <th><label for="dob">DOB: </label></th>
             <th><input type="date" name="dob" id="dob"></th>
         </tr> 
-        <tr>
+        <tr id="item6">
             <th><label for="gender">Gender: </label></th>
             <th>
                 <input type="radio" name="gender" value="male" id="gender">Male
                 <input type="radio" name="gender" value="female" id="gender">Female
             </th>
         </tr> 
-        <tr>
+        <tr id="item7">
             <th><button type="reset">cancel</button></th>
             <th><button>Register</button></th>
         </tr>

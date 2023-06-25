@@ -3,10 +3,68 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Doctor Home</title>
+<style>
+    *{
+        margin:0;
+        padding: 0;
+       
+    }
+    body{
+        background-image: url(./images/360_F_487692869_V8MZ1hLvhXQZKT50EV8Sh13AkdibGJb3.jpg);
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow-x: hidden;  
+    }
+    .canva a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        padding: 10px 0;
+        color: rgba(25, 21, 238, 0.882);
+    
+        
+    }
+    .canva button{
+        width: 30%;
+        height: 29px;
+        background: transparent;
+        border-radius: 20px;
+        color:rgba(49, 15, 239, 0.866);
+        border-color:rgba(12, 27, 240, 0.87);
+        font-size: large;
+        font-weight: bold;
+        border-width: 2px;
+       margin-left: -240px;
+       
+    
+    }
+    .canva1 button{
+        width: 9%;
+        height: 30px;
+        background: transparent;
+        border-radius: 20px;
+        color:rgb(44, 23, 233);
+        border-color:rgb(42, 17, 234);
+        font-size: large;
+        font-weight: bold;
+        border-width: 2px;
+        margin:-8px 0 0 320px;
+    
+    }
+    </style>
 </head>
 <body>
-<a href=""><button>View Details</button></a>
-<a href=""><button>See Upcomming Appointments</button></a>
-<a href=""><button>Edit Details</button></a>
+ <div class="canva">
+     <a href="doctoravailable"><button>Change Availability</button></a><br><br>
+     <a href="UpcomingAppointments.jsp"><button>See Upcoming Appointments</button></a><br><br>
+    <a href="DoctorAllAppointments.jsp"><button>All Appointments</button></a><br><br>
+</div>
+<div class="canva1">
+  <a href="logout"><button>Logout</button></a>
+</div>
 </body>
 </html>

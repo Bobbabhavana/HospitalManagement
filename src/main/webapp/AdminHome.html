@@ -3,12 +3,84 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Admin Home</title>
+<style>
+
+*{
+    margin:0;
+    padding: 0;
+   
+}
+body{
+    background-image: url(./images/HD-wallpaper-premium-medicine-doctor-s-working-on-laptop-computer-and-hand-doctor-on-background-focus-on-stethoscope-hospital.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-x: hidden;  
+}
+.canva a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 25px 0;
+    color: aqua;
+
+    
+}
+.canva button{
+    width: 20%;
+    height: 27px;
+    background: transparent;
+    border-radius: 20px;
+    color:aqua;
+    border-color:aqua;
+    font-size: large;
+    font-weight: bold;
+    border-width: 2px;
+   margin-left: -240px;
+   
+
+}
+.canva1 button{
+    width: 9%;
+    height: 30px;
+    background: transparent;
+    border-radius: 20px;
+    color:aqua;
+    border-color:aqua;
+    font-size: large;
+    font-weight: bold;
+    border-width: 2px;
+    margin: 20px 0 0 330px;
+
+}
+/* button{
+    position: relative;
+    left:32%;
+    width:25%;                                                                                                                                                                                 
+    font-size:20px;
+    top: 65px;
+    padding: 1px 55px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+   
+} */
+
+</style>
 </head>
 <body>
-<a href="fetchallstaff"><button>Approve Staff</button></a>
-<a href="fetchalldoctor"><button>Approve Doctor</button></a>
+    <div class="canva">
+       <a href="adminfetchallstaff"><button>View Staff</button></a>
+       <a href="adminfetchalldoctor"><button>View Doctor</button></a>
+       <a href="adminfetchallpatient"><button>View All Patients</button></a>
+    </div>
 
+<div class="canva1">
+   <a href="logout"><button>Logout</button></a>
 
-
+</div>
 </body>
 </html> 

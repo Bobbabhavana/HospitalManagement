@@ -3,11 +3,69 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Staff Home</title>
+<style>
+*{
+    margin:0;
+    padding: 0;
+   
+}
+body{
+    background-image: url(./images/360_F_487692869_V8MZ1hLvhXQZKT50EV8Sh13AkdibGJb3.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-x: hidden;  
+}
+.canva a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 25px 0;
+    color: rgba(25, 21, 238, 0.882);
+
+    
+}
+.canva button{
+    width: 20%;
+    height: 27px;
+    background: transparent;
+    border-radius: 20px;
+    color:rgba(49, 15, 239, 0.866);
+    border-color:rgba(12, 27, 240, 0.87);
+    font-size: large;
+    font-weight: bold;
+    border-width: 2px;
+   margin-left: -240px;
+   
+
+}
+.canva1 button{
+    width: 9%;
+    height: 30px;
+    background: transparent;
+    border-radius: 20px;
+    color:rgb(44, 23, 233);
+    border-color:rgb(42, 17, 234);
+    font-size: large;
+    font-weight: bold;
+    border-width: 2px;
+    margin: 20px 0 0 320px;
+
+}
+</style>
 </head>
 <body>
+    <div class="canva">
 <a href="AddPatient.html"><button>Add patient</button></a>
-<a href=""><button>Book Appointment</button></a>
-<a href=""><button>View Patient History</button></a>
-<a href=""><button>Edit Patient Details</button></a>
+<a href="BookAppointment.jsp"><button>Book Appointment</button></a>
+<a href="adminfetchallpatient"><button>View Patient History</button></a>
+<a href="EnterPatientid.html"><button>Edit Patient Details</button></a>
+</div>
+<div class="canva1">
+<a href="logout"><button>Logout</button></a>
+</div>
 </body>
 </html>

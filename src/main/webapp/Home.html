@@ -2,15 +2,75 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
-<link rel="stylesheet" href="Home.css">
+<title>Home Page</title>
+<style>
+*{
+   margin:0;
+   padding:0;
+}
+    body{
+    background-image: url(./images/0918f18ef47b7c0da7814733270a1f52.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    
+    
+}
+
+.bobba h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    color:red;
+    
+     
+
+}
+button{
+    position: relative;
+    left:65%;
+    width:90px;                                                                                                                                                                                 
+    font-size:16px;
+    top: 200px;
+    padding: 6px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    background-color: aqua;
+    border-color: aqua;
+    border-radius: 55px;
+    box-shadow: 10px 5px 5px;
+}
+button[type]{
+    box-shadow: 10px 10px 5px black;
+}
+button[type]:hover
+{
+    transition: all 0.5s linear 0.1s;
+    transform: rotate3d(360deg);
+    cursor: pointer;
+}
+h1{
+    position: relative;
+    left:20%;
+    color: red;
+    top:180px;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+</style>
 </head>
 <body>
     <div class="bobba">
-<h1>Welcome to Hospital Home page</h1>
-<br>
-<a href="Login.html"><button>Login</button></a>
-</div>
+        <h1>Welcome to Hospital Home page</h1>
+
+        <a href="Login.html"><button>Login</button></a>
+    </div>
 
 </body>
 </html>

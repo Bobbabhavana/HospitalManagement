@@ -2,17 +2,62 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Add Patient</title>
+<style>
+
+*{
+    margin:0;
+    padding: 0;
+   
+}
+body{
+    background-image: url(./images/360_F_216472247_cT66WDoS0fp1s3wC7eaykMJNDGVbOBPq.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-x: hidden;  
+}
+#demo{
+    position: relative;
+    font-size: 42px;
+    font-weight: bolder;
+    left: 20%;
+    top: 40px;
+    color:brown;
+}
+#item{
+    position: relative;
+    font-weight: bold;
+    left:25%;
+    top: 50px;
+    font-size: 15px;
+}
+a{
+    position: relative;
+    font-weight: bold;
+    left:25%;
+    top:40px;
+    font-size: 20px;
+}
+</style>
 </head>
 <body>
-<form action="patient" method="post" enctype="multipart/form-data">
-Enter Name:<input type="text" name="name"><br><br>
-Enter Mobile: <input type="tel" pattern="{0-9}[10]" name="mobile"><br><br>
-Enter DOB:<input type="date" name="dob"><br><br>
-picture:<input type="file" name="picture"><br>
+<h1 id="demo">Enter Patient Details</h1>
+<div id="item">
+    <form action="patient" method="post" enctype="multipart/form-data">
+    Enter Name:<input type="text" name="name"><br><br>
+    Enter Mobile: <input type="tel" pattern="{0-9}[10]" name="mobile"><br><br>
+    Enter DOB:<input type="date" name="dob"><br><br>
+    picture:<input type="file" name="picture"><br><br>
  
-<button>Add</button>   <button type="reset">Cancel</button>
+    <button>Add</button>   <button type="reset">Cancel</button>
 
-</form>
+   </form>
+</div>
+<br>
+
+<a href="StaffHome.html"><button>Back</button></a>
 </body>
 </html>
